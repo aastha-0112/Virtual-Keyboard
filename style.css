@@ -1,0 +1,109 @@
+body {
+    font-family: 'Merienda', cursive;
+    background-color: powderblue;
+    margin: 2.5em;
+}
+
+#heading {
+    text-align: center;
+    color: rgb(8, 69, 71);
+}
+
+#textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+#text {
+    padding: 1.5em;
+    width: 60%;
+    height: 10%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border: none;
+    border-radius: 1.5em;
+    box-shadow: 0.5em 0.5em 0.5em 0.5em rgb(4, 66, 74);
+}
+
+.keyboard {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0;
+    background: #004134;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    height: 16em;
+}
+
+.keyboard--hidden {
+    bottom: -100%;
+}
+
+.kkeys {
+    text-align: center;
+}
+
+.kkey {
+    height: 45px;
+    width: 5.5%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(17, 98, 101);
+    color: #ffffff;
+    font-size: 1.08rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.kkey:active {
+    background: powderblue;
+    color: black;
+}
+
+.key--wide {
+    width: 12%;
+}
+
+.key-extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.key--activatable ::after {
+    content: ' ';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.key--active ::after {
+    background: rgb(111, 250, 111);
+}
+
+.key--dark {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.capsOn {
+    text-transform: uppercase;
+}
